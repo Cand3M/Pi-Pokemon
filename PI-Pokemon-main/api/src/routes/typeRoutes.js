@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/types', async (req, res) => {
+const Type = require('../models/Type');
+
+router.get('/type', async (req, res) => {
     try {
       let types = await Type.findAll();
       if (types.length === 0) {
