@@ -1,4 +1,6 @@
+// PokemonCard.js
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const PokemonCard = ({ pokemonId }) => {
@@ -22,16 +24,12 @@ const PokemonCard = ({ pokemonId }) => {
   }
 
   return (
-    <div className="pokemon-details">
-      <img src={pokemonInfo.sprites.front_default} alt={pokemonInfo.name} />
-      <div>
-        <h4>Types:</h4>
-        <ul>
-          {pokemonInfo.types.map((type, index) => (
-            <li key={index}>{type.type.name}</li>
-          ))}
-        </ul>
-      </div>
+    <div className="pokemon-card">
+      <Link to={`/pokemon/${pokemonInfo.id}`}>
+        <img src={pokemonInfo.sprites.front_default} alt={pokemonInfo.name} />
+        <h3>{pokemonInfo.name}</h3>
+        <p>Types: {pokemonInfo.types.map(type => type.type.name).join(', ')}</p>
+      </Link>
     </div>
   );
 };
