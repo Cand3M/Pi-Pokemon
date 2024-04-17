@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 
-
 module.exports = (sequelize) => {
   const Pokemon = sequelize.define('Pokemon', {
     ID: {
@@ -44,8 +43,17 @@ module.exports = (sequelize) => {
   });
 
   Pokemon.associate = (models) => {
-    Pokemon.belongsToMany(models.Type, { through: 'PokemonType' });
+    Pokemon.belongsToMany(models.Type, { through: 'PokemonType', foreignKey: 'PokemonID' });
   };
 
+  Pokemon.createPokemon = async (pokemonData) => {
+    try {
+      return await Pokemon.create(pokemonData);
+    } catch (error) {
+      throw new Error('Error creating pokemon');
+    }
+  };  
+  
   return Pokemon;
 };
+

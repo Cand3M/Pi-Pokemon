@@ -1,4 +1,4 @@
-const { Pokemon } = require('../models');
+const { Pokemon } = require('../../models/Pokemon');
 
 const searchPokemonsByName = async (req, res) => {
   const { name } = req.query;
@@ -6,7 +6,7 @@ const searchPokemonsByName = async (req, res) => {
     const pokemons = await Pokemon.findAll({
       where: {
         name: {
-          [Sequelize.Op.iLike]: `%${name}%`, // Case-insensitive search
+          [Sequelize.Op.iLike]: `%${name}%`,
         },
       },
     });

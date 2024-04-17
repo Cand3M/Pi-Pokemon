@@ -1,6 +1,7 @@
-// HomePage.js
 import React, { useState, useEffect } from 'react';
 import PokemonCard from '../Card/Card';
+import './Home.css'
+import { Link } from 'react-router-dom'; 
 
 const HomePage = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -24,7 +25,7 @@ const HomePage = () => {
         url: pokemon.url
       }));
 
-      // Obtener información adicional de cada pokemon
+      
       const detailedPokemons = await Promise.all(pokemonsData.map(async pokemon => {
         const response = await fetch(pokemon.url);
         if (!response.ok) {
@@ -89,18 +90,17 @@ const HomePage = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Search Pokemon by name"
-        value={searchTerm}
-        onChange={e => setSearchTerm(e.target.value)}
-      />
-      <div>
-        <button onClick={() => handleSort('name')}>Sort by Name</button>
-        <button onClick={() => handleSort('attack')}>Sort by Attack</button>
-      </div>
-      <div>
-        <h4>Filter by Type:</h4>
+      <input type="text"
+      placeholder="Search Pokemon by name"
+      value={searchTerm}
+      onChange={e => setSearchTerm(e.target.value)}
+    />
+    <div className="button-container">
+      <button onClick={() => handleSort('name')}>Sort by Name</button>
+      <button onClick={() => handleSort('attack')}>Sort by Attack</button>
+    </div>
+    <div className="filter-text">Filter by Type:</div>
+    <div className="filter-buttons">
         <button onClick={() => handleTypeFilter('grass')}>Grass</button>
         <button onClick={() => handleTypeFilter('fire')}>Fire</button>
         <button onClick={() => handleTypeFilter('water')}>Water</button>
@@ -120,6 +120,9 @@ const HomePage = () => {
         totalPokemons={filteredPokemons.length}
         paginate={paginate}
       />
+        <Link to="/create-pokemon">
+        <button>Crear Nuevo Pokémon</button>
+      </Link>
     </div>
   );
 };
@@ -143,6 +146,7 @@ const Pagination = ({ pokemonsPerPage, totalPokemons, paginate }) => {
         ))}
       </ul>
     </nav>
+    
   );
 };
 

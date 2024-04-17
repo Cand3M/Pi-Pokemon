@@ -1,4 +1,4 @@
-// DetailPage.js
+import './Detail.css'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -24,6 +24,7 @@ const DetailPage = ({ match }) => {
   }
 
   return (
+    <div class="background-image-container">
     <div className="pokemon-details">
       <h2>{pokemon.name}</h2>
       <img src={pokemon.sprites.front_default} alt={pokemon.name} />
@@ -39,13 +40,14 @@ const DetailPage = ({ match }) => {
         </>
       )}
       <div>
-        <h4>Tipos:</h4>
+        <h4>Types:</h4>
         <ul>
           {pokemon.types.map((type, index) => (
             <li key={index}>{type.type.name}</li>
           ))}
         </ul>
       </div>
+    </div>
     </div>
   );
 };

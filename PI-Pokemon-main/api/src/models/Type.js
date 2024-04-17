@@ -15,8 +15,8 @@ module.exports = (sequelize) => {
   });
 
   Type.associate = (models) => {
-    Type.belongsToMany(models.Pokemon, { through: 'PokemonType' });
-  };
+    Type.belongsToMany(models.Pokemon, { through: 'PokemonType', foreignKey: 'TypeID' });
+  };  
 
   return Type;
 };

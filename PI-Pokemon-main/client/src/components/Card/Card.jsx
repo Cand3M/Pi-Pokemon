@@ -1,7 +1,7 @@
-// PokemonCard.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './Card.css'
 
 const PokemonCard = ({ pokemonId }) => {
   const [pokemonInfo, setPokemonInfo] = useState(null);

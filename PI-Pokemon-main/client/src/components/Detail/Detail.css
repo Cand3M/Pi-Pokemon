@@ -1,0 +1,53 @@
+.background-image-container {
+  position:static; /* Asegura que los elementos absolutamente posicionados se ubiquen dentro de este contenedor */
+  background-image: url('./wp10200991-pokemon-map-wallpapers.png'); /* Fondo con transparencia */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  padding: 10px; /* Ajusta el padding */
+  border-radius: 8px; /* Agrega bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.584); /* Agrega sombra */
+  margin: 10px auto; /* Centra el contenedor horizontalmente y establece el margen superior e inferior */
+  max-width: 600px; /* Limita el ancho máximo del contenedor */
+  overflow: hidden; /* Oculta el contenido que desborda */
+}
+
+.pokemon-details {
+  font-family: 'Jester', sans-serif; /* Usa la tipografía Jester */
+  background-color: rgba(255, 255, 255, 0.4); /* Color de fondo sólido con transparencia */
+  border-radius: 8px; /* Agrega bordes redondeados */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 10px; /* Ajusta el padding */
+}
+
+
+.pokemon-details h2 {
+  font-size: 26px; /* Tamaño de fuente para el nombre del Pokémon */
+  margin-bottom: 8px; /* Margen inferior ligeramente reducido */
+}
+
+.pokemon-details img {
+  max-width: 200px; /* Tamaño máximo de la imagen */
+  margin: 0 auto 8px; /* Margen superior e inferior y centrado horizontal */
+}
+
+.pokemon-details p {
+  font-size: 16px; /* Tamaño de fuente para los datos del Pokémon */
+  color: #000; /* Cambiado el color del texto a negro */
+  margin-bottom: 6px; /* Margen inferior ligeramente reducido */
+}
+
+.pokemon-details ul {
+  margin-top: 6px; /* Margen superior ligeramente reducido */
+  padding-left: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+.pokemon-details ul li {
+  list-style: none; /* Elimina los puntos de la lista */
+  font-size: 16px; /* Tamaño de fuente para los tipos de Pokémon */
+  color: #000; /* Cambiado el color del texto a negro */
+  margin-bottom: 4px; /* Margen inferior ligeramente reducido */
+}
+
+.pokemon-details ul li:before {
+  content: "•"; /* Agrega un bullet personalizado */
+  margin-right: 5px; /* Espacio entre el bullet y el texto */
+}

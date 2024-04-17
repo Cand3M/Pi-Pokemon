@@ -5,6 +5,7 @@ import Landing from './components/LandingPage/Landing';
 import Home from './components/HomePage/Home';
 import About from './components/About/About';
 import Detail from './components/Detail/Detail';
+import FormPage from './components/Form/Form';
 import './Font.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/home" component={Home} /> 
           <Route path="/about" component={About} />
           <Route path="/pokemon/:id" component={Detail} />
+          <Route path="/create-pokemon" component={FormPage} />
         </Switch>
       </div>
     </Router>

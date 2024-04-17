@@ -1,0 +1,102 @@
+body {
+  font-family: 'Jester', sans-serif; /* Usa la tipografía Jester */
+  background-color: rgb(31, 31, 29)/* Color de fondo */
+}
+
+input[type="text"] {
+  padding: 8px; /* Añade un poco de espacio dentro del campo de búsqueda */
+  margin-bottom: 10px; /* Margen inferior */
+  width: 40%; /* Ocupa todo el ancho disponible */
+  box-sizing: border-box;
+  background-color: #ffffffe6; /* Incluye el padding en el ancho total */
+}
+
+.button-container {
+  display: flex; /* Alinea los botones horizontalmente */
+  justify-content: space-between; /* Espacio entre los botones */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+.button-container button {
+  padding: 8px 16px; /* Añade espacio dentro de los botones */
+  margin-right: 5px; /* Margen derecho */
+  border: none; /* Elimina el borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.button-container button:hover {
+  background-color: #ccc; /* Color de fondo al pasar el mouse */
+}
+
+.pagination {
+  display: flex; /* Alinea los números de página horizontalmente */
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el relleno */
+  justify-content: center; /* Centra los números de página */
+}
+
+.pagination li {
+  margin: 0 5px; /* Margen entre los números de página */
+}
+
+.pagination li button {
+  padding: 6px 12px; /* Añade espacio dentro de los botones */
+  border: none; /* Elimina el borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.pagination li button:hover {
+  background-color: #1348ba48; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para los botones de filtrado */
+.filter-buttons {
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+.filter-buttons button {
+  padding: 8px 16px; /* Añade espacio dentro de los botones */
+  margin-right: 5px; /* Margen derecho */
+  border: none; /* Elimina el borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.filter-buttons button:hover {
+  background-color: #ccc; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el texto "Filter by Type:" */
+.filter-text {
+  margin-bottom: 10px; /* Margen inferior */
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  color: #fff; /* Color del texto */
+}
+
+/* Estilos para los botones de filtrado y el botón de crear nuevo Pokémon */
+.filter-buttons button,
+.button-container button,
+button /* Estilo del botón "Crear Nuevo Pokémon" */ {
+  padding: 8px 16px; /* Añade espacio dentro de los botones */
+  margin-right: 5px; /* Margen derecho */
+  border: none; /* Elimina el borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+  transition: background-color 0.3s ease; /* Transición suave */
+  font-family: 'Jester', sans-serif; /* Usa la tipografía Jester */
+}
+
+/* Estilos para el texto "Filter by Type:" */
+.filter-text {
+  margin-bottom: 10px; /* Margen inferior */
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  color: #fff; /* Color del texto */
+}
+

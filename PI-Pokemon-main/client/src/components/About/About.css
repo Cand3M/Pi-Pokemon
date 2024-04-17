@@ -1,45 +1,61 @@
-
+/* Estilos base */
 .about {
-    font-family: 'Jester';
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Jester', sans-serif;
+  background-image: url('./wp11999269-pokemon-region-wallpapers.jpg');
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  padding: 20px;
+  min-height: 100vh; /* Establece la altura mínima del contenedor al 100% del viewport height */
+  display: flex; /* Usa flexbox para centrar verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+.profile-summary,
+.profile-experience {
+  width: 100%;
+  max-width: 600px; /* Ancho máximo para evitar que el contenido se extienda demasiado en pantallas grandes */
+  background-color: rgba(255, 255, 255, 0.605); /* Color de fondo sólido con transparencia */
+  padding: 20px; /* Ajusta el padding */
+  border-radius: 8px; /* Agrega bordes redondeados */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media (min-width: 768px) {
+  .profile-summary,
+  .profile-experience {
+    width: 80%; /* Reducir el ancho para pantallas medianas */
   }
-  
-  .profile-header {
-    margin-bottom: 30px;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+  .profile-summary,
+  .profile-experience {
+    width: 60%; /* Reducir aún más el ancho para pantallas grandes */
   }
-  
-  .profile-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .profile-title {
-    font-size: 18px;
-    color: #666;
-  }
-  
-  .profile-summary {
-    margin-bottom: 30px;
-  }
-  
-  .profile-summary p {
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .experience-item {
-    margin-bottom: 20px;
-  }
-  
-  .experience-item h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #444;
-  }
-  
+}
+
+.profile-header {
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+.profile-name {
+  font-size: 36px; /* Tamaño de fuente grande */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+.profile-title {
+  font-size: 24px; /* Tamaño de fuente mediano */
+}
+
+.experience-item {
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+.experience-item h3 {
+  font-size: 24px; /* Tamaño de fuente mediano */
+  margin-bottom: 5px; /* Margen inferior */
+}
